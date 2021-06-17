@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     android:background="#F4F4F4"
+    android:gravity="center_vertical"
+     android:orientation="vertical"
+    >
+    
+     <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        android:background="#F4F4F4" />
+     
+      <LinearLayout
+        android:id="@+id/ll_win_jc_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+         android:background="@drawable/select_jc_lv_parent_win_up"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+     
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="2014-12-12 周五"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_big_text_size" />
+
+    <TextView
+        android:id="@+id/tv_weekday"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_big_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_playCount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="55场比赛可投 "
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_big_text_size"
+        android:visibility="visible" />
+</LinearLayout>
+
+      
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hall_bg_grey" >
+
+    <include
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_header_select" />
+
+    <RelativeLayout
+        android:id="@+id/no_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_top"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_nodata" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/follow_loading"
+        style="@style/pull_to_refresh_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_top"
+        android:layout_marginTop="@dimen/common_margin_16"
+        android:gravity="center_horizontal"
+        android:text="数据加载中..." />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.gcapp.tc"
+        android:id="@+id/programme_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_top"
+        android:divider="@color/hall_bg_grey"
+        android:fadingEdge="none"
+        android:listSelector="#e2e2e2"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+        pulltorefresh:ptrAnimationStyle="rotate"
+        pulltorefresh:ptrHeaderBackground="@color/hall_bg_grey" />
+
+</RelativeLayout>

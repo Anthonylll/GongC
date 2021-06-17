@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/main_red"
+            android:text="消息中心"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lager_text_size" />
+    </RelativeLayout>
+
+    <com.gcapp.tc.wheel.widget.TabPageIndicator
+        android:id="@+id/all_message_indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/my_all_lottery_indicator_height"
+        android:background="@color/vpi_indicator_bg"
+        android:visibility="visible" />
+
+    <ImageView
+            android:id="@+id/indicator_shade"
+            android:layout_width="fill_parent"
+            android:layout_height="12dp"
+            android:background="@color/hall_bg_grey" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/all_message_viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

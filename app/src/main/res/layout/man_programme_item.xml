@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/man_programme_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:background="@color/white" >
+	
+    <TextView
+	    android:id="@+id/programme_initiate_time"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginTop="10dp"
+	    android:textColor="@color/gray"
+	    android:textSize="@dimen/common_small_text_size"
+	    android:singleLine="true"
+		android:maxEms="6"
+		android:ellipsize="end"
+	    android:text="01-29" />
+    
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/programme_initiate_time"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="10dp"
+	    android:textColor="@color/gray"
+	    android:textSize="@dimen/common_small_text_size"
+	    android:singleLine="true"
+		android:maxEms="6"
+		android:ellipsize="end"
+	    android:text="发起方案" />
+	
+	<TextView
+	    android:id="@+id/man_programme_content"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/programme_initiate_time"
+	     android:layout_marginTop="6dp"
+	    android:layout_marginLeft="10dp"
+	     android:layout_marginRight="10dp"
+	    android:textColor="@color/black"
+	    android:textSize="@dimen/common_lager_text_size"
+	    android:ellipsize="end"  
+        android:maxLines="2" 
+	    android:text="SP3红单专家，十五年经验!红单专家，十五年经验!红单专家，十五年经验!红单专家，十五年经验!红单专家，十五年经验!红单专家，十五年经验!" />
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    android:layout_below="@+id/man_programme_content"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:background="@drawable/programme_layout"
+	    android:orientation="horizontal" >
+	        
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="3"
+	        android:orientation="vertical" >
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:orientation="horizontal" >
+	            
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/gray"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="类型" />
+	            
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/gray"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="自购金额" />
+	            
+	            <TextView
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/gray"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="单倍金额" />
+	            
+	        </LinearLayout>
+	            
+	        <View
+	        	android:layout_width="match_parent"
+	        	android:layout_height="1dp"
+	        	android:background="#E3E3E3"
+	        	android:layout_centerInParent="true" />
+	            
+	       	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:orientation="horizontal" >
+	            
+	       	    <TextView
+	       	        android:id="@+id/man_lottery_name"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/black"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="竞彩足球" />
+	       	    
+	       	    <TextView
+	       	        android:id="@+id/man_total_money"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/black"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="10000元" />
+	       	    
+	       	    <TextView
+	       	        android:id="@+id/man_single_money"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textColor="@color/black"
+	                android:layout_gravity="center_vertical"
+	                android:gravity="center"
+	                android:text="2元" />
+	       	    
+	        </LinearLayout>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="1dp"
+	        android:layout_height="match_parent"
+	        android:background="#E3E3E3" />
+	    
+	    <RelativeLayout
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" >
+	        
+	        <Button
+	            android:id="@+id/man_follow_btn"
+	            android:layout_width="wrap_content"
+	            android:layout_height="30dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:textColor="@color/white"
+	            android:textSize="@dimen/common_lager_text_size"
+	            android:background="@drawable/documentary_red_btn"
+	            android:layout_centerInParent="true"
+	            android:text="跟单"
+	            android:visibility="gone" />
+	        
+	        <TextView
+	            android:id="@+id/win_money"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/gray"
+	            android:textSize="14dp"
+	            android:layout_centerInParent="true"
+	            android:text="112930.3元"
+	            android:visibility="visible" />
+	        
+	    </RelativeLayout>
+	    
+	</LinearLayout>
+	
+</RelativeLayout>

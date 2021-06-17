@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_select"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red_new" >
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="付款成功"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_max_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_top_select"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/paysuc_icon_size"
+            android:layout_height="@dimen/paysuc_icon_size"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/paysuc_icon_gou" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:text="您已成功付款，敬请关注方案详情"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_lage_text_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="金额消费: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_lage_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_successJinE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lage_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 元"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_lage_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="彩金消费: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/tv_successCaiJin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="优惠金额: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余金额: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/tv_remainBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余彩金: "
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/tv_remainCaijin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_select_schemeinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/paysuccess_bg_btn"
+            android:gravity="center"
+            android:text="查看投注详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <Button
+            android:id="@+id/btn_continue_bet"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/paysuccess_bg_btn"
+            android:gravity="center"
+            android:text="继续投注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <Button
+            android:id="@+id/btn_back_tohall"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/paysuccess_bg_btn"
+            android:gravity="center"
+            android:text="返回首页"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

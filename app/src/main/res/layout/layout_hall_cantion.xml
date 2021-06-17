@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hall_ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/slider"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" >
+
+        <com.gcapp.tc.viewpager.AutoLoopViewPager
+            android:id="@+id/autoLoop"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <com.gcapp.tc.viewpager.CirclePageIndicator
+            android:id="@+id/indy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:padding="4dp" />
+    </FrameLayout>
+    <!--
+    这里放置listview,gridview或者scrollview的布局 ,PullToRefreshView
+	要设置android:orientation="vertical"属性
+	否则,显示不正确
+
+    -->
+
+    <GridView
+        android:id="@+id/gv_hall_lottry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#eaeaea"
+        android:horizontalSpacing="@dimen/hall_gv_spacing"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:paddingTop="@dimen/hall_gv_paddingtop"
+        android:verticalSpacing="@dimen/hall_gv_spacing" />
+
+</LinearLayout>

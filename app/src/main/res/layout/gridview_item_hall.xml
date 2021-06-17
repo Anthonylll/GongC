@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/gv_rl_hall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/selector_hall_gvitem" >
+
+            <RelativeLayout
+                android:id="@+id/layout_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_margin="8dp" >
+
+                <ImageView
+                    android:id="@+id/iv_lottery"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/layout_image"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/tv_hall_lotteryname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="双色球"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_hall_describ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hall_lotteryname"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="今晚21:30开奖"
+                    android:textColor="@color/hall_gvitem_text"
+                    android:textSize="@dimen/common_min_text_size"
+                    android:visibility="gone" />
+
+                <com.gcapp.tc.view.CustomDigitalClock
+                    android:id="@+id/cdc_hall_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hall_describ"
+                     android:layout_centerHorizontal="true"
+                    android:textColor="@color/hall_gvitem_text"
+                    android:textSize="@dimen/common_min_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_hall_dm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_hall_describ"
+                    android:layout_centerHorizontal="true"
+                    android:text="皇马VS塞维利亚"
+                    android:textColor="@color/hall_gvitem_text"
+                    android:textSize="@dimen/common_min_text_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_lottery_kj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/iv_lottery_kj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_hall_kaijiang"
+                        android:gravity="center"
+                        android:text="今日开奖"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_min_text_size"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_stopSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_lottery_kj"
+                        android:background="@drawable/log_hall_stopsale"
+                        android:gravity="center|center_horizontal"
+                        android:text="暂停销售"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_min_text_size"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/hall_iv_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/hall_gv_reg"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/iv_winornot"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/logo_jiajiang" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

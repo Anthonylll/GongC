@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hall_bg_grey" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="全部订单"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+  
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.gcapp.tc"
+        android:id="@+id/ptr_MyAccount"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/hall_bg_grey2"
+        android:dividerHeight="@dimen/common_diver_height"
+        android:fadingEdge="none"
+        android:listSelector="#e2e2e2"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+        pulltorefresh:ptrAnimationStyle="rotate"
+        pulltorefresh:ptrHeaderBackground="@color/my_center_bg2" />
+
+</RelativeLayout>

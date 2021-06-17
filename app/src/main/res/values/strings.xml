@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">佳衡</string>
+    <string name="app_logo">佳衡</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_tab_hall">购彩</string>
+    <string name="main_tab_follow">跟单</string>
+    <string name="main_tab_win">开奖</string>
+    <string name="main_tab_info">资讯</string>
+    <string name="main_tab_center">我的</string>
+    <string name="about_app">客服在线时间为10：00 ~ 22：00</string>
+
+    <!-- 刷新 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新中...</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中…</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_from_bottom_release_label">松开后加载</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">加载中...</string>
+    <!-- 选号 -->
+
+
+    <!-- 用户中心 -->
+    <string name="center_tv_balance">可投注金额</string>
+    <string name="center_tv_freeze">冻结</string>
+    <string name="center_tv_hint">提示：充值无手续费，最低充值1元</string>
+    <string name="center_tv_nitification">1、为了尽可能防范套现和洗钱，充值金额100%须用于消费。</string>
+	<string name="nitification_two">2、应官方要求，支付宝单笔充值金额不大于10000元，支付宝快捷支付单笔充值金额大于10元且不大于2000元，充值通道具体规则可参考返回的提示消息。</string>
+	<string name="nitification_three">4、充值成功后，若金额未到账，请等待1—2分钟，或联系客服。</string>
+	<string name="modify_nickname_one">1、用户名由4-15个字符组成，可以包含英文、数字、中文、下划线等，其中一个汉字长度为2，其它长度为1。</string>
+	<string name="modify_nickname_two">2、修改成功后无法再次修改。</string>
+	<string name="withdrawals_text">1、每日最多进行一次提款操作，当日已成功提款一次，再次提款时将提示“提款失败”；</string>
+	<string name="withdrawals_text_two">2、提款申请一般会在24小时之内处理，如果超过24小时未到账请联系客服；</string>
+	<string name="withdrawals_text_three">3、每日可提款时间段为：</string>
+    
+    <!-- 用户投注页面 -->
+    <string name="mylottry_title_name">投注记录</string>
+    <string name="mylottry_title_all">全部</string>
+    <string name="mylottry_title_lottery">中奖</string>
+    <string name="mylottry_title_unlottery">待开奖</string>
+    <string name="mylottry_title_follow">追号</string>
+    <string name="mylottry_title_chipped">合买</string>
+    <string name="center_bottom_unLottery">待开奖</string>
+    <string name="center_title_eixt">退出登录</string>
+
+    <!-- 登录注册 -->
+    <string name="tv_name">账号:</string>
+    <string name="tv_pass">密码:</string>
+    <string name="btn_login">登录</string>
+    <string name="login_btn_reg">免费注册</string>
+    <string name="login_et_name">请输入用户名</string>
+    <string name="login_et_pass">密码</string>
+    <string name="reg_tv_titleName">免费注册</string>
+    <string name="login_tv_titleName">登录</string>
+    <string name="reg_tv_rePass">重复密码</string>
+    <string name="reg_btn_reg">注册</string>
+    <string name="reg_tv_email">邮箱</string>
+
+    <!-- 选号界面 -->
+    <string name="select_btn_playInfo">玩法说明</string>
+    <string name="select_tv_kaijiang">上期开奖:</string>
+    <string name="select_yao">摇一摇机选号码</string>
+    <string name="num_common_red">红球区</string>
+    <string name="num_dan_red">胆码区-红球</string>
+    <string name="num_tuo_red">拖码区-红球</string>
+    <string name="num_dan_blue">胆码区-篮球</string>
+    <string name="num_common_blue">蓝球区</string>
+    <string name="num_tuo_blue">蓝球</string>
+    <string name="num_common_redShow">至少选出6个红球</string>
+    <string name="num_dan_redShow">至少选出1个,最多5个</string>
+    <string name="num_dan_redShow2">至少选出1个,最多4个</string>
+    <string name="num_tuo_redShow">至少选出1个</string>
+    <string name="num_blueShow">至少选出1个</string>
+    <!-- 22选5 -->
+    <string name="buy_22x5">22选5</string>
+    <string name="num_22X5_redShow">请至少选出5个红球</string>
+    <!-- 大乐透 -->
+    <string name="num_cjdlt_red">前区号码</string>
+    <string name="num_cjdlt_red2">胆码区-前区号码</string>
+    <string name="num_cjdlt_red3">拖码区-前区号码</string>
+    <string name="num_cjdlt_blue">后区号码</string>
+    <string name="num_cjdlt_blue2">胆码区-后区号码</string>
+    <string name="num_cjdlt_blue3">拖码区-后区号码</string>
+    <string name="num_cjdlt_redShow">请至少选出5个前区号码</string>
+    <string name="num_cjdlt_redShow2">请选出5个前区号码</string>
+    <string name="num_cjdlt_blueShow">请至少选出2个后区号码</string>
+    <string name="num_cjdlt_blueShow2">只能选择1个</string>
+
+    <!-- 支付宝 -->
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+
+    <!-- 彩票资讯 -->
+    <string name="lotteryInformation_Title">彩票资讯</string>
+    <string name="lotteryInformation_Children0">彩票资讯</string>
+    <string name="lotteryInformation_Children1">专家推荐</string>
+    <string name="lotteryInformation_Children2">站点公告</string>
+
+    <!-- 时时乐 -->
+    <string name="ssl2901">普通投注</string>
+    <string name="ssl2902">组三单式</string>
+    <string name="ssl2903">组三复式</string>
+    <string name="ssl2904">组六</string>
+    <string name="ssl2905">前二</string>
+    <string name="ssl2906">后二</string>
+    <string name="ssl2907">前一</string>
+    <string name="ssl2908">后一</string>
+    <string name="recharge">您的余额不足！请及时充值</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_select_jclq_activity52">Select_jclqActivity52</string>
+    <string name="title_activity_check_phone_number">CheckPhoneNumber</string>
+    <string name="title_activity_regist_phone_num_">Regist_phoneNum_Activity</string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="title_activity_update_password">UpdatePasswordActivity</string>
+    <string name="title_activity_all_message">AllMessageActivity</string>
+    <string name="title_activity_regist__agreement">Regist_Agreement</string>
+    <string name="title_activity_base_select">BaseSelectActivity</string>
+    <string name="title_activity_base_bet">BaseBetActivity</string>
+    <string name="title_activity_jxccs_bet">JxccsBetActivity</string>
+    <string name="title_activity_integral_detail">IntegralDetailActivity</string>
+    <string name="title_activity_imag_lorder">ImagLorderActivity</string>
+    <string name="regist_account">还没有账号？</string>
+    
+    
+    <string name="facebook_app_id">1266254913438718</string>
+    <string name="umeng_update_content">版本号：6.4.4\n1.twitter不安装客户端也可以进行分享\n2.facebook不安装客户端也可以进行分享\n3.新浪精简版，修复部分rom不能唤起客户端问题\n4.增加新浪微博linkcard的功能\n5.修改微信精简版分享小程序的相关bug，以及对微信的版本做了适配兼容</string>
+    <string name="umeng_home_title">U-Share产品Demo</string>
+    <string name="umeng_home_update">新版更新内容</string>
+    <string name="umeng_share_title">分享</string>
+    <string name="umeng_auth_title">授权</string>
+    <string name="umeng_delauth_title">删除授权</string>
+    <string name="umeng_getinfo_title">获取用户信息</string>
+    <string name="umeng_check_title">自检工具</string>
+    <string name="umeng_menu_title">分享菜单模板</string>
+    <string name="umeng_check_sign">检查签名</string>
+    <string name="umeng_check_sina">检查新浪</string>
+    <string name="umeng_check_wx">检查微信</string>
+    <string name="umeng_check_alipay">检查支付宝</string>
+    <string name="umeng_check_qq">检查qq</string>
+    <string name="umeng_check_fb">检查facebook</string>
+    <string name="umeng_check_vk">vkontakte</string>
+    <string name="umeng_choose_style">选择分享类型</string>
+    <string name="umeng_sharebutton_copy">复制文本</string>
+    <string name="umeng_sharebutton_copyurl">复制连接</string>
+    
+    <!--  新增2018-06-22  -->
+    <string name="apply_great_man">备注：申请提交后，工作人员会在1-3个工作日内进行审核；若符合以上条件，但申请长期未通过的用户，建议再次进行申请；若有疑问，请联系QQ客服</string>
+
+</resources>

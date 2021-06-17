@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/great_man_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <com.gcapp.tc.view.CircleImg
+            android:id="@+id/great_man_img"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:background="@drawable/center_circle_imageview" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/great_man_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/great_man_layout"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:maxEms="5"
+        android:singleLine="true"
+        android:text="张三"
+        android:textColor="@color/gray2"
+        android:textSize="@dimen/common_text_size" />
+
+</RelativeLayout>

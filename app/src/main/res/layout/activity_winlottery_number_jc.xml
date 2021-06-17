@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:slider="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/main_red"
+            android:text="竞彩足球开奖详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lager_text_size" />
+
+        <ImageButton
+            android:id="@+id/btn_date"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/funds_info_date" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@id/rl_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="赛事"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="对阵"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="赛果"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+
+        <com.gcapp.tc.view.IphoneTreeView
+            android:id="@+id/jc_exListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#DDDCDC"
+            android:childDivider="#e5e5e5"
+            android:divider="@color/hall_bg_grey"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:scrollingCache="false" >
+        </com.gcapp.tc.view.IphoneTreeView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <com.gcapp.tc.view.SlideView
+            android:id="@+id/slide_touzhu"
+            android:layout_width="228dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/slip_bg"
+            slider:effectiveLength="180dp"
+            slider:effectiveVelocity="1300dp"
+            slider:maskText="滑动投注"
+            slider:maskTextMarginLeft="100dp"
+            slider:maskTextMarginTop="28dp"
+            slider:maskTextSize="16sp"
+            slider:slidableLength="182dp"
+            slider:slider="@drawable/slip_button"
+            slider:sliderMarginLeft="2dp"
+            slider:sliderMarginTop="1dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

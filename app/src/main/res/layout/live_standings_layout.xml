@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <!--  <com.hzsd.sls_app.view.PullToRefreshView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mPullToRefreshView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" > -->
+
+        <ExpandableListView
+            android:id="@+id/standings_match_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:childDivider="@color/hall_bg_grey2"
+            android:divider="@color/hall_bg_grey2"
+            android:dividerHeight="1dp"
+            android:groupIndicator="@null" />
+        
+        <!-- <com.hzsd.sls_app.view.NestScrollView
+            android:id="@+id/hall_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hall_bg_grey"
+                    android:padding="10dp"
+                    android:text="历史交锋"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/hall_bg_grey"
+                    android:padding="10dp"
+                    android:text="近期比赛"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </com.hzsd.sls_app.view.NestScrollView> -->
+    <!-- </com.hzsd.sls_app.view.PullToRefreshView> -->
+
+</LinearLayout>

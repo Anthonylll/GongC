@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_today"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="今天"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_lage_text_size" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/hall_bg_grey2" />
+
+    <Button
+        android:id="@+id/btn_week"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="最近一周"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_lage_text_size" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+      android:layout_height="0.5dp"
+        android:background="@color/hall_bg_grey2" />
+
+    <Button
+        android:id="@+id/btn_oneMonth"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="最近一月"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_lage_text_size" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+       android:layout_height="0.5dp"
+        android:background="@color/hall_bg_grey2" />
+
+    <Button
+        android:id="@+id/btn_threeMonth"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="最近三月"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_lage_text_size" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+      android:layout_height="0.5dp"
+        android:background="@color/hall_bg_grey2" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_lage_text_size" />
+
+</LinearLayout>

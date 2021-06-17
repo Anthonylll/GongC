@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:id="@+id/match_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:text="·近3场，天津权健" />
+        
+        <TextView
+            android:id="@+id/win_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/red"
+            android:textSize="13dp"
+            android:text="2胜" />
+        
+        <TextView
+            android:id="@+id/bisection_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="13dp"
+            android:text="0平" />
+        
+        <TextView
+            android:id="@+id/lose_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="13dp"
+            android:text="1负" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/bet_white_middle_bg"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:text="日期" />
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:text="赛事" />
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:text="主队vs客队" />
+        
+        <TextView
+            android:id="@+id/result_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:text="胜负" />
+        
+    </LinearLayout>
+    
+    <com.gcapp.tc.view.MyListView2
+        android:id="@+id/record_match_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/standings_hint_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="14dp"
+        android:textColor="@color/gray"
+        android:text="暂无数据"
+        android:visibility="gone" />
+
+</LinearLayout>

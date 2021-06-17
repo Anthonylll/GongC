@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/list_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/list_learue_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/common_small_text_size" />
+
+        <TextView
+            android:id="@+id/list_team_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_small_text_size" />
+
+        <TextView
+            android:id="@+id/list_win_text"
+            style="@style/integral_list"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/list_defeatCount_text"
+            style="@style/integral_list"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/list_probability_text"
+            style="@style/integral_list_two"
+            android:text="-" />
+        
+        <TextView
+            android:id="@+id/list_winstate_text"
+            style="@style/integral_list_two"
+            android:text="-" />
+
+    </LinearLayout>
+
+</LinearLayout>

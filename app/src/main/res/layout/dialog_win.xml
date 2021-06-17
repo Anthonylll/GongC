@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRelativeLayoutView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/dialog_win_bg" />
+
+        <LinearLayout
+            android:id="@+id/layout_hongbao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dialog_win_hongbao_margintop"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_win_money_left" />
+
+            <TextView
+                android:id="@+id/dialog_win_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_win_money_right"
+                android:gravity="center"
+                android:text="100元"
+                android:textColor="@color/dialog_win_tv"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dialog_btn_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_hongbao"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dialog_win_btn_find_change" />
+    </RelativeLayout>
+
+</RelativeLayout>

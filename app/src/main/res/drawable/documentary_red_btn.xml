@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+     <!-- 按钮可点，并按下 -->
+    <item android:state_enabled="true" android:state_pressed="true"><shape android:shape="rectangle">
+            <corners android:radius="20dip" />
+
+            <solid android:color="#fa2405" />
+        </shape></item>
+        
+    <!-- 按钮可点,未按下 -->
+    <item android:state_enabled="true" android:state_pressed="false"><shape android:shape="rectangle">
+            <corners android:radius="20dip" />
+
+            <solid android:color="#ff5138" />
+        </shape></item>
+
+</selector>

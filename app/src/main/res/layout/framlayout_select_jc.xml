@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 竞彩篮球的选球页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4" >
+
+    <include
+        android:id="@+id/include_bommon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/common_footer_select" />
+
+    <RelativeLayout
+        android:id="@+id/select_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/include_bommon"
+        android:background="@color/hall_bg_grey" >
+
+        <LinearLayout
+            android:id="@+id/sticky_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/hall_bg_grey"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:gravity="center"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="赛事"
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lage_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="主队"
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lage_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="客队"
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lage_text_size" />
+            </LinearLayout>
+
+            <com.gcapp.tc.view.IphoneTreeView
+                android:id="@+id/expandablelist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+              	android:cacheColorHint="#DDDCDC"
+                android:childDivider="#e5e5e5"
+                android:childIndicatorLeft="0dp"
+                android:divider="@color/hall_bg_grey"
+                android:dividerHeight="0.5dp"
+                android:groupIndicator="@null"
+                android:scrollbarAlwaysDrawHorizontalTrack="false" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

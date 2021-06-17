@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 彩种 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="22" >
+
+            <TextView
+                android:id="@+id/tv_lotteryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="11选5" />
+
+            <TextView
+                android:id="@+id/optimize"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignBaseline="@+id/tv_lotteryName"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_lotteryName"
+                android:background="@drawable/bg_circle"
+                android:gravity="center"
+                android:text="优"
+                android:textColor="#ff0000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/img_win"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignBaseline="@+id/tv_lotteryName"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/optimize"
+                android:background="@drawable/win_logo"
+                android:gravity="center"
+                android:textColor="#ff0000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_CaiJinCost"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tv_lotteryName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#777777"
+                android:textSize="12sp"
+                tools:text="彩金消费24.00元" />
+
+            <TextView
+                android:id="@+id/tv_JinECost"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tv_CaiJinCost"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#777777"
+                android:textSize="12sp"
+                tools:text="金额消费24.00元" />
+        </RelativeLayout>
+
+        <!-- 订单 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="35" >
+
+            <TextView
+                android:id="@+id/tv_playType"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                tools:text="追号订单" />
+
+        </RelativeLayout>
+
+        <!-- 未出票 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30" >
+
+            <TextView
+                android:id="@+id/tv_isWin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="visible"
+                tools:text="未中奖" />
+
+            <ImageView
+                android:id="@+id/img_right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_isWin"
+                android:src="@drawable/my_center_right_arrow"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/win_logo"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_lotteryName2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="11选5" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/tv_lotteryName2"
+            android:layout_marginLeft="12dp"
+            android:textColor="#777777"
+            android:textSize="12sp"
+            tools:text="24.00元" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/arrows"
+        android:visibility="gone" />
+
+</LinearLayout>

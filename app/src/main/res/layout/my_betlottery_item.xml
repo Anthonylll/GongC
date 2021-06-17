@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_lotteryName"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:text="普通"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_bei"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:text="普通"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.gcapp.tc.view.MyGridView
+        android:id="@+id/gv_betNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clickable="false"
+        android:columnWidth="20dp"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:gravity="center"
+        android:horizontalSpacing="1dp"
+        android:numColumns="auto_fit" >
+    </com.gcapp.tc.view.MyGridView>
+
+    <TextView
+        android:id="@+id/tv_other_num"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="大小"
+        android:textColor="@color/bet_num_grey"
+        android:textSize="16sp" />
+
+</LinearLayout>

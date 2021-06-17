@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/line_shade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_select_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_jiangjin"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@color/hall_bg_grey"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="若中奖：奖金"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_jingjin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="40"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="元，"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_winOrLost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="盈利"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_profits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="20"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="元"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <!-- 选号 -->
+
+            <TextView
+                android:id="@+id/btn_clearall"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/common_toplayout_height"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/common_lage_text_size" />
+            <!-- 投注 -->
+
+            <TextView
+                android:id="@+id/btn_follow"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/common_toplayout_height"
+                android:background="#EFEFEF"
+                android:gravity="center"
+                android:text="发 单"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="@dimen/common_toplayout_height"
+                android:background="@color/hall_bg_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_tip_jc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_tip_jc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_tip_jc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="至少选择2场比赛"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_big_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tip_notjc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="共 "
+                        android:textColor="@color/main_red_new"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_tatol_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/main_red_new"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 注"
+                        android:textColor="@color/main_red_new"
+                        android:textSize="@dimen/common_lage_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_tatol_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 元"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/common_lage_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tip_jiangjin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预计奖金："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_jiangjin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_small_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/main_red_new"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/btn_submit"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/common_toplayout_height"
+                android:background="@color/main_red_new"
+                android:gravity="center"
+                android:onClick="btn_submit"
+                android:text="选好了"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

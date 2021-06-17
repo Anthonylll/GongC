@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F4F4F4"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sticky_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:gravity="center"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="赛事"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="主队"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客队"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+
+        <com.gcapp.tc.view.IphoneTreeView
+            android:id="@+id/jclq_fragment_item_exListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#DDDCDC"
+            android:childDivider="#e5e5e5"
+            android:childIndicatorLeft="0dp"
+          	android:divider="@color/hall_bg_grey"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:listSelector="#00000000"
+            android:scrollingCache="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:background="@color/hall_bg_grey" />
+    </LinearLayout>
+
+</FrameLayout>

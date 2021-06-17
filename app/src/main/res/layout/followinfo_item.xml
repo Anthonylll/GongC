@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical" >
+
+    <!-- android:background="@drawable/followinfo_item_back" -->
+
+    <LinearLayout
+        android:id="@+id/followinfo_item_top"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="5dp"
+        android:background="#cecdcd"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/followInfo_type"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="胆"
+            android:textColor="@color/red" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:background="@drawable/h_line" />
+
+        <TextView
+            android:id="@+id/followInfo_zhu"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="新加坡"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/followInfo_vs"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="VS"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/followInfo_ke"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="新加坡"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@id/img"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:background="@drawable/h_line" />
+
+        <TextView
+            android:id="@+id/follow_info_top_right"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2" />
+
+        <ImageView
+            android:id="@id/img"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:background="@drawable/h_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="6dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal|top"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="周四001"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:background="@drawable/h_line" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.6"
+            android:paddingLeft="5dp"
+            android:text="新加坡"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@id/img"
+            android:layout_width="3dp"
+            android:layout_height="32dp"
+            android:background="@drawable/h_line" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2" />
+
+        <ImageView
+            android:id="@id/img"
+            android:layout_width="3dp"
+            android:layout_height="30dp"
+            android:background="@drawable/h_line" />
+    </LinearLayout>
+
+</LinearLayout>

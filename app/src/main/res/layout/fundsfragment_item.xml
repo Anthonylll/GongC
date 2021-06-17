@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hall_bg_grey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <!-- 左侧日期布局 此处应为对应item的布局 -->
+
+        <LinearLayout
+            android:layout_width="@dimen/my_all_lottery_date_width"
+            android:layout_height="match_parent"
+            android:background="#fefef2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_funfrag_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_margin_8"
+                android:text="08月"
+                android:textColor="#888474"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_funfrag_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="05"
+                android:textColor="#888474"
+                android:textSize="@dimen/common_lager_text_size" />
+        </LinearLayout>
+
+        <!-- 右侧列表 此处应为对应item的子布局 -->
+
+        <com.gcapp.tc.view.MyListView2
+            android:id="@+id/funfrag_lv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:visibility="visible" />
+        
+        
+    </LinearLayout>
+    
+   
+
+</LinearLayout>

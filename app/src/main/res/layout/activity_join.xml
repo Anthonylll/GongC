@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_header_select" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_shade_height"
+            android:background="@color/hall_bg_grey2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共  "
+                android:textColor="@color/grey"
+                android:textSize="@dimen/common_lager_text_size" />
+
+            <TextView
+                android:id="@+id/follow_tv_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="2"
+                android:textColor="@color/main_red_new"
+                android:textSize="@dimen/common_lager_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 元"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/common_lager_text_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/main_red_new"
+            android:gravity="center"
+            android:text="付款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/include_top"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/layout_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="自购金额  "
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:id="@+id/follow_self_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="10"
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 元"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+<!--             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="方案金额  "
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:id="@+id/follow_total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="10"
+                    android:textColor="@color/main_red_new"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 元"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text=" 分成 "
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:id="@+id/follow_total_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="5"
+                    android:textColor="@color/main_red"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 份"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="起跟金额"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/follow_add_sub_layout_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dp" >
+
+                    <Button
+                        android:id="@+id/follow_sub_money"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_sub_white" />
+
+                    <EditText
+                        android:id="@+id/follow_et_money"
+                        android:layout_width="@dimen/follow_et_yj_width"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:numeric="integer"
+                        android:text="1"
+                        android:textColor="@color/grey"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <Button
+                        android:id="@+id/follow_add_money"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_add_white" />
+                    
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@color/white" />
+                    
+                    <Button
+                        android:id="@+id/ten_add_money"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_add_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hint_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="元"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+                
+                <!-- <LinearLayout
+                    android:layout_width="@dimen/follow_layout_money"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/follow_btn_money1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:layout_weight="0.5"
+                        android:background="@color/main_red_new"
+                        android:gravity="center"
+                        android:text="1.0元"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_lager_text_size" />
+
+                    <TextView
+                        android:id="@+id/follow_btn_money2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:layout_weight="0.5"
+                        android:clickable="false"
+                        android:background="@color/main_red_new"
+                        android:gravity="center"
+                        android:text="2.0元"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_lager_text_size" />
+                </LinearLayout> -->
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="中奖佣金"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/follow_add_sub_layout_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dp" >
+
+                    <Button
+                        android:id="@+id/follow_btn_sub_yj"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_sub_white" />
+
+                    <EditText
+                        android:id="@+id/follow_et_yj"
+                        android:layout_width="@dimen/follow_et_yj_width"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:numeric="integer"
+                        android:text="10"
+                        android:textColor="@color/grey"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <Button
+                        android:id="@+id/follow_btn_add_yj"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_add_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" %"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+            </LinearLayout>
+
+            <!-- <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="我要购买"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/follow_add_sub_layout_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dp" >
+
+                    <Button
+                        android:id="@+id/follow_btn_sub_wantbuy"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_sub_white" />
+
+                    <EditText
+                        android:id="@+id/follow_et_wantbuy"
+                        android:layout_width="@dimen/follow_et_yj_width"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:numeric="integer"
+                        android:text="1"
+                        android:textColor="@color/grey"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size" />
+
+                    <Button
+                        android:id="@+id/follow_btn_add_wantbuy"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_add_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 份"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+            </LinearLayout> -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+<!--             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/follow_layout_common_height"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="我要保底"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/follow_add_sub_layout_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dp" >
+
+                    <Button
+                        android:id="@+id/follow_btn_sub_bd"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_sub_white"
+                        android:clickable="false" />
+
+                    <EditText
+                        android:id="@+id/follow_et_bd"
+                        android:layout_width="@dimen/follow_et_yj_width"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:numeric="integer"
+                        android:text="0"
+                        android:textColor="@color/grey"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size"
+                        android:enabled="false" />
+
+                    <Button
+                        android:id="@+id/follow_btn_add_bd"
+                        android:layout_width="@dimen/follow_et_yj_height"
+                        android:layout_height="@dimen/follow_et_yj_height"
+                        android:background="@drawable/common_add_white"
+                        android:clickable="false" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 份"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <CheckBox
+                    android:id="@+id/bet_cb_allbaodi"
+                    android:layout_width="@dimen/bet_cb_size"
+                    android:layout_height="@dimen/bet_cb_size"
+                    android:layout_marginLeft="13dp"
+                    android:button="@drawable/common_cb_selector"
+                    android:visibility="gone"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_small_text_size" />
+            </LinearLayout> -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="105dp"
+                android:layout_marginLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="保密设置"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_tip"
+                    android:background="@drawable/et_bg"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="201dp"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/follow_btn_public"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="公开"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/common_lager_text_size" />
+
+                        <ImageView
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/hall_bg_grey2" />
+
+                        <TextView
+                            android:id="@+id/mfollow_btn_toend"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="跟单可见"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/common_lager_text_size" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/hall_bg_grey2" />
+
+                    <LinearLayout
+                        android:layout_width="201dp"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/follow_btn_afterwin"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/main_red_new"
+                            android:gravity="center"
+                            android:text="开赛可见"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_lager_text_size" />
+
+                        <ImageView
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/hall_bg_grey2" />
+
+                        <TextView
+                            android:id="@+id/follow_btn_baomi"
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/follow_et_yj_height"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:text="永久保密"
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/common_lager_text_size" />
+                    </LinearLayout>
+                    <!-- android:background="@drawable/follow_btn_bg" -->
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="85dp"
+                android:layout_marginLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_tip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="方案标题"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/tv_tip2"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5" >
+
+                    <!-- android:numeric="integer" -->
+
+                    <EditText
+                        android:id="@+id/follow_et_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/et_bg"
+                        android:gravity="left"
+                        android:hint="请输入标题（20字以内）"
+                        android:maxLength="20"
+                        android:textColor="@color/black"
+                        android:textColorHint="#c7c7c7"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/main_shade_height"
+                android:background="@color/hall_bg_grey2" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:layout_marginLeft="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_tip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="方案描述"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/common_lager_text_size" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/tv_tip1"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5" >
+
+                    <!-- android:numeric="integer" -->
+
+                    <EditText
+                        android:id="@+id/follow_et_description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="90dp"
+                        android:background="@drawable/et_bg"
+                        android:gravity="left"
+                        android:hint="最多可输入50字"
+                        android:maxLength="50"
+                        android:textColor="@color/black"
+                        android:textColorHint="#c7c7c7"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/common_lage_text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

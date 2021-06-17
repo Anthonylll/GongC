@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp" >
+
+    <LinearLayout
+        android:id="@+id/orderinfo_jc_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bet_lottery_logo_text_height"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="4" >
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/orderinfo_jc_youhua_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
+            android:text="过关" />
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            style="@style/orderinfo_jc_youhua_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1.3"
+            android:orientation="vertical"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/tv_2_1"
+                style="@style/orderinfo_jc_youhua_text"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.25"
+                android:text="单注组合"
+                android:textSize="@dimen/common_margin_8" />
+
+            <TextView
+                android:id="@+id/tv_2_2"
+                style="@style/orderinfo_jc_youhua_text"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.25"
+                android:text="单注组合"
+                android:textSize="@dimen/common_margin_8" />
+
+            <ImageView
+                android:id="@+id/im_2_3"
+                android:layout_width="5dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/win_lottery_detail_down" />
+        </LinearLayout>
+
+        <!--
+             <TextView
+            android:id="@+id/tv_3"
+            style="@style/orderinfo_jc_title_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1.3"
+            android:text="注数分布" />
+        -->
+
+        <LinearLayout
+            style="@style/orderinfo_jc_youhua_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1.3" >
+
+            <Button
+                android:id="@+id/follow_btn_sub_yj"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/common_sub_white" />
+
+            <EditText
+                android:id="@+id/ed_3"
+                android:layout_width="@dimen/bet_layout_xieyi_height"
+                android:layout_height="20dp"
+                android:background="@drawable/follow_btn_bg"
+                android:gravity="center"
+                android:numeric="integer"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/common_min_text_size" />
+
+            <Button
+                android:id="@+id/follow_btn_add_yj"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/common_add_white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/orderinfo_jc_youhua_text"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="0.8"
+            android:text="预测奖金" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tiem_line"
+        style="@style/orderinfo_jc_title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#FFE1FF"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/gone"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+</LinearLayout>

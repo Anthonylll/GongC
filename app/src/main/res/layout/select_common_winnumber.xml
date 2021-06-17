@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        layout="@layout/common_select_line" />
+
+    <LinearLayout
+        android:id="@+id/k3_layout_tile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_left_width"
+        android:layout_marginRight="@dimen/common_margin_right_width"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tv_qihao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="期次"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_winnumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="开奖号码"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="形态"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/k3_win_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_left_width"
+        android:layout_marginRight="@dimen/common_margin_right_width"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollingCache="false"
+        android:visibility="gone" />
+
+</LinearLayout>

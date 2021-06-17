@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:id="@+id/ll_textView1"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_winnumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="03期开奖： 115"
+                android:textColor="@color/black_light" />
+
+            <LinearLayout
+                android:id="@+id/ll_winnum"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/winlottery_k3"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_winnum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/dice1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_light" />
+
+                    <TextView
+                        android:id="@+id/tv_winnum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/dice1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_light" />
+
+                    <TextView
+                        android:id="@+id/tv_winnum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/dice1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_light" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_up_down2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                   android:layout_marginLeft="12dp"
+                    android:background="@drawable/k3_icon_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 右边的布局 -->
+        <LinearLayout
+            android:id="@+id/ll_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_jiezhitime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="距04期截止："
+                android:textColor="@color/black_light" />
+
+            <com.gcapp.tc.view.CustomDigitalClock
+                android:id="@+id/select_ks_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="@color/black_light" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

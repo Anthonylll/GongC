@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rv_main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageView
+            android:id="@+id/tv_service"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_hotline"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_xmax_text_size"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hall_ll_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.gcapp.tc.view.PullToRefreshView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mPullToRefreshView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <com.gcapp.tc.view.NestScrollView
+                android:id="@+id/hall_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@+id/slider"
+                        android:layout_width="fill_parent"
+                        android:layout_height="150dp" >
+
+                        <com.gcapp.tc.viewpager.AutoLoopViewPager
+                            android:id="@+id/autoLoop"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp" />
+
+                        <com.gcapp.tc.viewpager.CirclePageIndicator
+                            android:id="@+id/indy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:padding="4dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hall_ll_advertisement"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone">
+
+                        <com.gcapp.tc.view.GifView
+                            android:id="@+id/hall_img_advertisement"
+                            android:layout_width="20dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center" />
+
+                        <com.gcapp.tc.view.AutoMoveTextView
+                            android:id="@+id/rolltextView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/hall_win_info_text"
+                            android:textSize="@dimen/common_big_text_size" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/hall_bg_grey" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="10dp" >
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/main_red" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:singleLine="true"
+                            android:text="热门彩票"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/common_lager_text_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/hall_bg_grey" />
+
+                    <com.gcapp.tc.view.DragGridView
+                        android:id="@+id/gv_hall_lottry"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:horizontalSpacing="0dp"
+                        android:listSelector="@null"
+                        android:numColumns="2"
+                        android:paddingTop="@dimen/hall_gv_paddingtop"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="1dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/hall_bg_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/score_line"
+                            android:layout_width="3dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/main_red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/score_line"
+                            android:text="比分"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageButton
+                                android:id="@+id/live_football_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/hall_live_football_image" />
+
+                            <ImageButton
+                                android:id="@+id/live_basketball_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="90dp"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/hall_live_basketball_image" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/hall_bg_grey" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/hall_bg_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <View
+                            android:id="@+id/information_line"
+                            android:layout_width="3dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/main_red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/information_line"
+                            android:text="资讯"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/information_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="更多 +"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <com.gcapp.tc.view.MyListView2
+                            android:id="@+id/main_information_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/information_line"
+                            android:divider="#e2e2e2"
+                            android:dividerHeight="1dp"
+                            android:scrollbars="none" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.gcapp.tc.view.NestScrollView>
+        </com.gcapp.tc.view.PullToRefreshView>
+    </RelativeLayout>
+
+</LinearLayout>

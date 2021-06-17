@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bet_ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_btn_back_size"
+            android:layout_height="@dimen/common_btn_back_size"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="onclickBack"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_playtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="积分兑换"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_lager_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_goto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="onclickDetail"
+            android:padding="10dp"
+            android:text="积分明细"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_big_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/frame_integral_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1" >
+
+
+                <EditText
+                    android:id="@+id/et_integral"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center_vertical"
+                     android:background="@drawable/et_bg"
+                    android:hint="请整百输入要兑换的积分"
+                    android:inputType="number"
+                    android:textColor="@color/gray2"
+                    android:textColorHint="#c7c7c7"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <TextView
+                    android:id="@+id/btn_integral_exchange"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:background="@color/common_bg_pink"
+                    android:gravity="center"
+                    android:onClick="onclickExchangeIntegral"
+                    android:text="兑换"
+                    android:textColor="@color/main_red"
+                    android:textSize="@dimen/common_big_text_size" />
+            </LinearLayout>
+
+            <com.gcapp.tc.view.MyGridView
+                android:id="@+id/gv_integral"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg"
+    tools:context="com.gcapp.tc.sd.ui.Regist_Agreement" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_select"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/main_red"
+            android:text="用户注册协议"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lager_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top_select" >
+
+        <TextView
+            android:id="@+id/regist_agreement_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_margin_8"
+            android:textColor="@color/select_lv_item_tv_gray"
+            android:textSize="@dimen/common_lager_text_size"
+            tools:text="@string/hello_world" />
+    </ScrollView>
+
+</RelativeLayout>

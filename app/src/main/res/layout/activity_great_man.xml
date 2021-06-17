@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hall_bg_grey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/activity_great_man__bg" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:onClick="back"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <com.gcapp.tc.view.CircleImg
+            android:id="@+id/great_man_user_avatar"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/center_circle_imageview" />
+
+        <TextView
+            android:id="@+id/great_man_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/great_man_user_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_lager_text_size" />
+
+        <View
+            android:id="@+id/line_horizontal"
+            android:layout_width="0.1dp"
+            android:layout_height="0.1dp"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/great_man_user_name"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/line_horizontal"
+            android:background="@drawable/activity_great_man_hit"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="近七单"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_min_text_size" />
+
+            <TextView
+                android:id="@+id/recently_hit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="-投-中"
+                android:textColor="@color/red"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/great_man_user_name"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/line_horizontal"
+            android:background="@drawable/activity_great_man_hit"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胜率"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_min_text_size" />
+
+            <TextView
+                android:id="@+id/winning_probability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="--.--%"
+                android:textColor="@color/red"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.gcapp.tc"
+        android:id="@+id/man_programme_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/hall_bg_grey"
+        android:dividerHeight="@dimen/common_margin_10"
+        android:fadingEdge="none"
+        android:listSelector="#e2e2e2"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+        pulltorefresh:ptrAnimationStyle="rotate"
+        pulltorefresh:ptrHeaderBackground="@color/hall_bg_grey" />
+    
+    <!-- <ListView
+        android:id="@+id/man_programme_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/hall_bg_grey"
+        android:dividerHeight="10dp" /> -->
+
+</LinearLayout>

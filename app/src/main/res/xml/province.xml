@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<province>
+<row id="1" provincename="安徽省" ></row>
+<row id="2" provincename="北京市" ></row>
+<row id="3" provincename="福建省" ></row>
+<row id="4" provincename="甘肃省" ></row>
+<row id="5" provincename="广东省" ></row>
+<row id="6" provincename="广西省" ></row>
+<row id="7" provincename="贵州省" ></row>
+<row  id="8" provincename="海南省" ></row>
+<row id="9" provincename="河北省" ></row>
+<row id="10" provincename="河南省" ></row>
+<row id="11" provincename="黑龙江省" ></row>
+<row id="12" provincename="湖北省" ></row>
+<row id="13" provincename="湖南省" ></row>
+<row id="14" provincename="吉林省" ></row>
+<row id="15" provincename="江苏省" ></row>
+<row id="16"  provincename="江西省" ></row>
+<row id="17" provincename="辽宁省" ></row>
+<row id="18" provincename="内蒙古省" ></row>
+<row id="19" provincename="宁夏省" ></row>
+<row id="20" provincename="青海省" ></row>
+<row id="21" provincename="山东省" ></row>
+<row id="22" provincename="山西省" ></row>
+<row id="23" provincename="陕西省" ></row>
+<row id="24" provincename="上海省" ></row>
+<row id="25" provincename="四川省" ></row>
+<row id="26" provincename="天津市" ></row>
+<row id="27" provincename="西藏省" ></row>
+<row id="28" provincename="新疆省" ></row>
+<row id="29" provincename="云南省" ></row>
+<row id="30" provincename="浙江省" ></row>
+<row id="31" provincename="重庆市" ></row>
+<row id="32" provincename="香港" ></row>
+<row id="33" provincename="澳门" ></row>
+<row id="34"  provincename="台湾" ></row>
+</province>

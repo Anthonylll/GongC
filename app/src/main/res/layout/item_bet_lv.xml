@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/common_pink_bg" >
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/bet_listview_item_delbtn_size"
+            android:layout_height="@dimen/bet_listview_item_delbtn_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_delete" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/iv_delete"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_show_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 03 18 23 27 28 33 12"
+                android:textSize="@dimen/common_lager_text_size" />
+
+            <TextView
+                android:id="@+id/tv_type_count_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单式  1注  2元"
+                android:textColor="@color/bet_et"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

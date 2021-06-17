@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_pink_bg"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+    <LinearLayout
+        android:id="@+id/spf_ll"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.25"
+          android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/spf_tv_id"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:gravity="center|bottom"
+            android:text=""
+            android:textColor="@color/select_pop_lv_tv"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/spf_tv_name"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/select_pop_lv_tv"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/spf_tv_time"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/select_pop_lv_tv"
+            android:textSize="@dimen/common_big_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spf_right_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+        android:layout_weight="0.75"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/right_top_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="0.9" >
+
+            <TextView
+                android:id="@+id/ll_tv_mainTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="bottom|right"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/ll_tv_vs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_horizontal|bottom"
+                android:text="VS"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_lage_text_size" />
+
+            <TextView
+                android:id="@+id/ll_tv_cusTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="bottom|left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_lage_text_size" />
+        </LinearLayout>
+        <!-- 胜平负 按钮点击区 -->
+
+        <LinearLayout
+            android:id="@+id/right_bottom_ll_spf"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/select_jc_rangqiu_layout_height"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="0.9" >
+
+            <Button
+                android:id="@+id/btn_mainWin"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/select_sfc_lv_item_left"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_small_text_size" />
+
+            <Button
+                android:id="@+id/btn_float"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/select_sfc_lv_item_center"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_small_text_size" />
+
+            <Button
+                android:id="@+id/btn_lose"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3"
+                android:background="@drawable/select_sfc_lv_item_right_selected"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+
+        <!-- 猜比分 按钮点击区 -->
+
+        <LinearLayout
+            android:id="@+id/jczq_cbf_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/select_jc_bifen_bqc_layout_height"
+            android:layout_margin="10dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/jczq_cbf_btn_open"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/select_jc_bg_white"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="请选择比分投注"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+
+        <!-- 总进球 按钮点击区 -->
+
+        <LinearLayout
+            android:id="@+id/jczq_zjq_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <!-- 总进球上面一部分 -->
+
+            <LinearLayout
+                android:id="@+id/zjq_top"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/select_jczq_tvlayout_zjq_height"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_0"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_red"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_0_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="2"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="3"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 总进球下面一部分 -->
+
+            <LinearLayout
+                android:id="@+id/zjq_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/select_jczq_tvlayout_zjq_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="4"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="5"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_6"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="6"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jczq_zjq_7"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/select_jczq_tv_bolder_white"
+                    android:textColor="@color/black" >
+
+                    <TextView
+                        android:id="@+id/tv_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="2dp"
+                        android:text="7+"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/common_dotted_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_min_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 上下单双 -->
+
+        <LinearLayout
+            android:id="@+id/jczq_sxds_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/sxds_ll_up"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/select_jc_bifen_bqc_layout_height"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/btn_sdan"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/select_sfc_lv_item_left"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <Button
+                    android:id="@+id/btn_ssuang"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/select_sfc_lv_item_left"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_small_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/select_jc_bifen_bqc_layout_height"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/btn_xdan"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/select_sfc_lv_item_left"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <Button
+                    android:id="@+id/btn_xshuang"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/select_sfc_lv_item_left"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_small_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jczq_sf_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/select_jc_rangqiu_layout_height"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btn_win2"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/select_sfc_lv_item_left"
+                android:gravity="center"
+                android:text="胜"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/common_small_text_size" />
+
+            <Button
+                android:id="@+id/btn_lose2"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/select_sfc_lv_item_right_selected"
+                android:gravity="center"
+                android:text="负"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+ </LinearLayout>
+</LinearLayout>

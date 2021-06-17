@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDCDC"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:weightSum="0.9" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="0.3"
+                android:background="@drawable/textview_bolder2"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-3dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:layout_weight="0.3"
+                android:background="@drawable/follow_textview_bolder"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="-3dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/follow_textview_bolder"
+                android:gravity="center"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

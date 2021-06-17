@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bet_ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_btn_back_size"
+            android:layout_height="@dimen/common_btn_back_size"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="onclickBack"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/not_finished_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity_live_text_left"
+                android:text="未结束"
+                android:textColor="@color/main_red"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/finished_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity_live_text_right"
+                android:text="已结束"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_live_date"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/funds_info_date" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/live_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bet_white_middle_bg"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hall_bg_grey2" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.gcapp.tc"
+        android:id="@+id/match_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/hall_bg_grey"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="#e2e2e2"
+        android:scrollbars="none"
+        android:scrollingCache="false"
+        pulltorefresh:ptrAnimationStyle="rotate"
+        pulltorefresh:ptrHeaderBackground="@color/hall_bg_grey" />
+
+    <TextView
+        android:id="@+id/nodata_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="当前暂无比赛数据！"
+        android:textColor="@color/gray"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

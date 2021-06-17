@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:background="@drawable/bet_back"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="温馨提示"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tv_title2"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="为了您的账号安全请先设置密码"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="7dp"
+        android:background="@drawable/edittext"
+        android:hint="输入支付密码"
+        android:paddingLeft="18dp"
+        android:textColorHint="#c7c7c7" />
+
+    <EditText
+        android:id="@+id/et_repass"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="7dp"
+        android:background="@drawable/edittext"
+        android:hint="再次输入支付密码"
+        android:paddingLeft="18dp"
+        android:textColorHint="#c7c7c7" />
+
+    <RelativeLayout
+        android:id="@+id/rl_btn_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" >
+
+        <Button
+            android:id="@+id/bottom_btn_ok"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:text="确认" />
+
+        <Button
+            android:id="@+id/bottom_btn_quit"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="取消" />
+    </RelativeLayout>
+
+</LinearLayout>

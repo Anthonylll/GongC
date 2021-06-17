@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_btn_back_size"
+            android:layout_height="@dimen/common_btn_back_size"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="back"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_playtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="幸运选号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_max_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_top" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/ivs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ivs_margin_top"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/zhaocaimao" />
+
+                <ImageView
+                    android:id="@+id/iv_cat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_cat"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/top_bg" />
+
+                <LinearLayout
+                    android:id="@+id/layout_btns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/iv_cat1"
+                    android:layout_marginBottom="@dimen/layout_btns_margin_bottom"
+                    android:layout_marginLeft="@dimen/layout_btns_margin_left"
+                    android:layout_toRightOf="@id/iv_cat"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_btn_select_lottery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/but_xz"
+                        android:gravity="center_vertical"
+                        android:onClick="selectLottery"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_lottery_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="十一运夺金"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_min_text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_btn_select_playtype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/but_xz"
+                        android:gravity="center_vertical"
+                        android:onClick="selectPlaytype"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_playtype_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="幸运星座"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_min_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivs"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/center_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <!-- 星座、属相 -->
+
+                <com.gcapp.tc.view.MyGridView
+                    android:id="@+id/gv_constellation"
+                    android:layout_width="@dimen/layout_xingzuo_width"
+                    android:layout_height="@dimen/layout_xingzuo_height"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:verticalSpacing="10dp"
+                    android:visibility="gone" />
+                <!-- 姓名 -->
+
+                <LinearLayout
+                    android:id="@+id/layout_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_name_margin_top"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="请输入您的姓名？"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="@dimen/et_name_width"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_small_text_size" />
+                </LinearLayout>
+                <!-- 情侣 -->
+
+                <LinearLayout
+                    android:id="@+id/layout_lovers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_name_margin_top"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="请输入情侣双方的姓名？"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/et_name_width"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <EditText
+                            android:id="@+id/et_lover1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@color/white"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/common_small_text_size" />
+
+                        <EditText
+                            android:id="@+id/et_lover2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="0.5"
+                            android:background="@color/white"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/common_small_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 出生日期 -->
+
+                <LinearLayout
+                    android:id="@+id/layout_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_name_margin_top"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="请选择您的出生年月日？"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_small_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/et_name_width"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <RelativeLayout
+                            android:id="@+id/layout_year"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:background="@color/white"
+                            android:onClick="selectY" >
+
+                            <TextView
+                                android:id="@+id/tv_year"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_small_text_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/sanjiao_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="年"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+
+                        <RelativeLayout
+                            android:id="@+id/layout_month"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:background="@color/white"
+                            android:onClick="selectM" >
+
+                            <TextView
+                                android:id="@+id/tv_month"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_small_text_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/sanjiao_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="月"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+
+                        <RelativeLayout
+                            android:id="@+id/layout_day"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:background="@color/white"
+                            android:onClick="selectD" >
+
+                            <TextView
+                                android:id="@+id/tv_day"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/common_small_text_size" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/sanjiao_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="日"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/common_small_text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_up"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xuanhao_btn"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:id="@+id/iv_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/guang" />
+
+                <Button
+                    android:id="@+id/btn_select_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_select_num_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/btn_select_num_margin_top"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:onClick="selectNumber"
+                    android:text="立即选号"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_lage_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_center"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/haomacenter" >
+
+                <com.gcapp.tc.view.MyListView2
+                    android:id="@+id/lv_number"
+                    android:layout_width="@dimen/layout_num_width"
+                    android:layout_height="@dimen/layout_num_height"
+                    android:layout_centerInParent="true"
+                    android:divider="@color/pink_lucky_number"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@android:color/transparent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_down_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_down"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/touzhu_btn_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_betting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="goBetting"
+                    android:src="@drawable/btn" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/layout_down_btn" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

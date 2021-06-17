@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e2e2e2"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp"
+        android:visibility="visible" >
+
+        <!-- 隐藏布局文件开始 -->
+
+        <TextView
+            android:id="@+id/funds_detail_fragment_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_8"
+            android:gravity="left|center_vertical"
+            android:text="2014年12月份账户明细"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/funds_detail_fragment_all"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_8"
+            android:gravity="left|center_vertical"
+            android:text="总收入540元，支出658元，中奖260元"
+            android:textColor="#848848"
+            android:textSize="@dimen/common_small_text_size"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_8"
+            android:layout_marginRight="@dimen/common_margin_8"
+            android:layout_marginTop="@dimen/common_margin_8"
+            android:background="#e2e2e2"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/funds_fragment_title_height"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2"
+                    android:background="#fefef2"
+                    android:gravity="center"
+                    android:text="金额"
+                    android:textColor="#848848"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="2"
+                    android:background="#fefef2"
+                    android:gravity="center"
+                    android:text="类型"
+                    android:textColor="#848848"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="2"
+                    android:background="#fefef2"
+                    android:gravity="center"
+                    android:text="时间"
+                    android:textColor="#848848"
+                    android:textSize="@dimen/common_small_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="3"
+                    android:background="#fefef2"
+                    android:gravity="center"
+                    android:text="摘要"
+                    android:textColor="#848848"
+                    android:textSize="@dimen/common_small_text_size" />
+            </LinearLayout>
+
+            <com.gcapp.tc.view.MyListView2
+                android:id="@+id/funds_detail_fragment_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#dddddd"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:fadingEdge="none"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 隐藏布局文件结束 -->
+
+
+        <!-- 左侧日期布局 此处应为对应item的布局 -->
+
+        <LinearLayout
+            android:layout_width="@dimen/my_all_lottery_date_width"
+            android:layout_height="match_parent"
+            android:background="#fefef2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_margin_8"
+                android:text="08月"
+                android:textColor="#888474"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="05"
+                android:textColor="#888474"
+                android:textSize="@dimen/common_lager_text_size" />
+        </LinearLayout>
+
+        <!-- 右侧列表 此处应为对应item的子布局 -->
+
+        <com.gcapp.tc.view.MyListView2
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <!-- 绑定适配器 -->
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:pulltorefresh="http://schemas.android.com/apk/res/com.gcapp.tc"
+            android:id="@+id/ptr_fundsListView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="#e2e2e2"
+            android:dividerHeight="@dimen/common_diver_height"
+            android:fadingEdge="none"
+            android:listSelector="#e2e2e2"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            pulltorefresh:ptrAnimationStyle="rotate"
+            pulltorefresh:ptrHeaderBackground="@color/my_center_bg2" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_select"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="@dimen/common_btn_back_size"
+                android:layout_height="@dimen/common_btn_back_size"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="@dimen/common_btn_back_size"
+                android:layout_height="@dimen/common_btn_back_size"
+                android:gravity="center_vertical"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_big_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_playtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="跟单列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_lager_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/bet_white_middle_bg"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="跟单用户"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="倍数"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="金额（元）"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="时间"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bet_dlt_continue_betting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/bet_lv_purchase"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none"
+            android:background="@color/white"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/ten_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/gray2"
+        android:textSize="14dp"
+        android:text="默认显示前十条数据"
+        android:visibility="gone" />
+
+</LinearLayout>

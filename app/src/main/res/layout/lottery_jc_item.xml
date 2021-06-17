@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/win_lottery_cj_detail_child_height"
+        android:background="#ffffff"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="周六053 21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_margin_4"
+            android:layout_marginTop="@dimen/common_margin_4"
+            android:background="@drawable/common_dotted_vertical"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_left2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_mainTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="面对抗生"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_loseBall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_margin_4"
+                android:gravity="center"
+                android:text="-1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_big_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_scorll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="1：1"
+                android:textColor="@color/win_lottery_jc_detail_score3_text"
+                android:textSize="@dimen/common_max_text_size" />
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="半"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_right1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5" >
+
+            <TextView
+                android:id="@+id/tv_gusTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="维尔大额"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_big_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/win_lottery_cj_detail_child_height"
+        android:background="#F8F8F0"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ll_result1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_result1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_resultInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_margin_4"
+            android:layout_marginTop="@dimen/common_margin_4"
+            android:background="@drawable/common_dotted_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_result2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_result2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_resultInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_margin_4"
+            android:layout_marginTop="@dimen/common_margin_4"
+            android:background="@drawable/common_dotted_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_result3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_result3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_resultInfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_margin_4"
+            android:layout_marginTop="@dimen/common_margin_4"
+            android:background="@drawable/common_dotted_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_result4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_result4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_resultInfo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_margin_4"
+            android:layout_marginTop="@dimen/common_margin_4"
+            android:background="@drawable/common_dotted_vertical" />
+
+        <LinearLayout
+            android:id="@+id/ll_result5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_result5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欧洲杯"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_resultInfo5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_4"
+                android:text="21:30"
+                android:textColor="#909090"
+                android:textSize="@dimen/common_big_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/line_shade1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_shade_height"
+        android:background="@color/hall_gv_item" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:layout_below="@+id/line_shade1"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="追"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_small_text_size" />
+
+            <EditText
+                android:id="@+id/et_qi"
+                android:layout_width="@dimen/bet_et_wid"
+                android:layout_height="@dimen/bet_et_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="1"
+                android:numeric="integer"
+                android:textColor="@color/bet_et"
+                android:textColorHint="#c7c7c7"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="期"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/select_vertical_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_small_text_size" />
+
+            <EditText
+                android:id="@+id/et_bei"
+                android:layout_width="@dimen/bet_et_wid"
+                android:layout_height="@dimen/bet_et_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="1"
+                android:numeric="integer"
+                android:textColor="@color/bet_et"
+                android:textColorHint="#c7c7c7"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="倍"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/select_vertical_line" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/bet_cb_stopfollow"
+                android:layout_width="@dimen/bet_cb_size"
+                android:layout_height="@dimen/bet_cb_size"
+                android:button="@drawable/common_cb_selector"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="中奖后停止追号"
+                android:textColor="@color/bet_et"
+                android:textSize="@dimen/common_small_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_shade2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_shade_height"
+        android:layout_below="@+id/layout1"
+        android:background="@color/hall_gv_item"
+        android:visibility="gone" />
+    
+    <RelativeLayout
+        android:id="@+id/coupon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin_32"
+        android:layout_below="@+id/line_shade2"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/coupon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin_24"
+            android:text="优惠券（请先确认投注倍数）"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrows" />
+    </RelativeLayout>
+    
+</RelativeLayout>

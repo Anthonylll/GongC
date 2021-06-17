@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_header_select" />
+
+    <include
+        android:id="@+id/include_bommon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/common_footer_select" />
+
+    <include
+        android:id="@+id/include_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_top"
+        layout="@layout/common_tip_pre_stoptime" />
+
+    <include
+        android:id="@+id/include_line_red"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_tip"
+        layout="@layout/common_select_line" />
+
+    <ScrollView
+        android:id="@+id/sv_show_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/include_bommon"
+        android:layout_below="@+id/include_tip"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollingCache="false" >
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+    </ScrollView>
+
+</RelativeLayout>

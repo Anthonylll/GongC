@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_pop_k3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_k3"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pop_k3_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/main_red_new"
+            android:textSize="@dimen/common_min_text_size" />
+
+        <TextView
+            android:id="@+id/pop_k3_text4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_min_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_k3_yilou"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_forget_size"
+        android:layout_below="@+id/ll_pop_k3"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_min_text_size"
+        android:visibility="visible" />
+
+</RelativeLayout>

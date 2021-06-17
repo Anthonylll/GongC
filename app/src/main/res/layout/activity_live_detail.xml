@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+         android:background="@drawable/activity_live_top_backgroud" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+        
+        <TextView
+            android:id="@+id/league_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="联赛" />
+        
+        <LinearLayout
+            android:id="@+id/team_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+            
+            <TextView
+            	android:id="@+id/detail_host_team"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="3"
+            	android:gravity="center_horizontal"
+            	android:textSize="@dimen/common_big_text_size"
+            	android:textColor="@color/white"
+            	android:text="主队" />
+            
+            <TextView
+            	android:id="@+id/detail_vs"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:gravity="center_horizontal"
+            	android:textSize="18dp"
+            	android:textColor="@color/white"
+            	android:text="VS" />
+            
+            <TextView
+            	android:id="@+id/detail_guest_team"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="3"
+            	android:gravity="center_horizontal"
+            	android:textSize="@dimen/common_big_text_size"
+            	android:textColor="@color/white"
+            	android:text="客队" />
+            
+        </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/ranking_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/team_layout"
+            android:layout_marginTop="3dp" >
+            
+            <TextView
+            	android:id="@+id/ranking_host_team"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="3"
+            	android:gravity="center_horizontal"
+            	android:textSize="@dimen/common_small_text_size"
+            	android:textColor="@color/ranking_text" />
+            
+            <TextView
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:gravity="center_horizontal" />
+            
+            <TextView
+            	android:id="@+id/ranking_guest_team"
+            	android:layout_width="0dp"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="3"
+            	android:gravity="center_horizontal"
+            	android:textSize="@dimen/common_small_text_size"
+            	android:textColor="@color/ranking_text" />
+            
+         </LinearLayout>
+        
+    </RelativeLayout>
+
+    <com.gcapp.tc.wheel.widget.TabPageIndicatorTwo
+        android:id="@+id/live_fragment_indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/my_all_lottery_indicator_height"
+        android:background="@color/vpi_indicator_bg" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/live_fragment_viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+</LinearLayout>

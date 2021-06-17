@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/infomation_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/main_top" >
+
+        <TextView
+            android:id="@+id/infomation_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="消息中心"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/infomation_top"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/infomation_top_one"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_information_change"
+            android:gravity="center"
+            android:text="系统消息" />
+
+        <Button
+            android:id="@+id/infomation_top_two"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_information_change"
+            android:gravity="center"
+            android:text="个人消息" />
+    </LinearLayout>
+
+    <com.gcapp.tc.view.MyListView
+        android:id="@+id/info_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:cacheColorHint="#DDDCDC"
+        android:divider="#DDDCDC"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:scrollingCache="false" >
+    </com.gcapp.tc.view.MyListView>
+
+</LinearLayout>

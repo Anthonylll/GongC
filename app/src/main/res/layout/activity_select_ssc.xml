@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/common_header_select" />
+
+    <include
+        android:id="@+id/include_bommon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/common_footer_select" />
+
+    <include
+        android:id="@+id/include_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_top"
+        layout="@layout/common_tip_pre_stoptime" />
+
+    <include
+        android:id="@+id/include_winnumlist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_tip"
+        layout="@layout/select_common_winnumber" />
+
+    <include
+        android:id="@+id/include_line_red"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_winnumlist"
+        layout="@layout/common_select_line" />
+
+    <ScrollView
+        android:id="@+id/sv_show_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/include_bommon"
+        android:layout_below="@+id/include_winnumlist"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollingCache="false" >
+
+        <RelativeLayout
+            android:id="@+id/number_sv_center_ll_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layout_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="每位至少选择一个号码"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/common_big_text_size" />
+
+                <LinearLayout
+                    android:id="@+id/layout_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <!-- @dimen/common_tip_select_wid -->
+
+                    <ImageView
+                        android:id="@+id/iv_shake"
+                       android:layout_width="115dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/select_random" />
+
+                    <TextView
+                        android:id="@+id/tv_shake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="机选"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_lage_text_size"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_sv_center_rlOne"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_tip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <com.gcapp.tc.view.MyGridView
+                        android:id="@+id/number_sv_center_gv_showOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnWidth="@dimen/icon_ball_size"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/icon_ball_spacing"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="@dimen/pop_gv_padding"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/icon_ball_spacing" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_sv_center_rlTwo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_sv_center_rlOne"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/include_line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/common_select_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include_line1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <com.gcapp.tc.view.MyGridView
+                        android:id="@+id/number_sv_center_gv_showTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_show2"
+                        android:columnWidth="@dimen/icon_ball_size"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/icon_ball_spacing"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="@dimen/pop_gv_padding"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/icon_ball_spacing" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_sv_center_rlThree"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_sv_center_rlTwo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/include_line2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/common_select_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include_line2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <com.gcapp.tc.view.MyGridView
+                        android:id="@+id/number_sv_center_gv_showThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnWidth="@dimen/icon_ball_size"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/icon_ball_spacing"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="@dimen/pop_gv_padding"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/icon_ball_spacing" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_sv_center_rlFour"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_sv_center_rlThree"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/include_line3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/common_select_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include_line3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <com.gcapp.tc.view.MyGridView
+                        android:id="@+id/number_sv_center_gv_showFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnWidth="@dimen/icon_ball_size"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/icon_ball_spacing"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="@dimen/pop_gv_padding"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/icon_ball_spacing" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/number_sv_center_rlFive"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_sv_center_rlFour"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/include_line4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/common_select_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/include_line4"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <com.gcapp.tc.view.MyGridView
+                        android:id="@+id/number_sv_center_gv_showFive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnWidth="@dimen/icon_ball_size"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/icon_ball_spacing"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="auto_fit"
+                        android:padding="@dimen/pop_gv_padding"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/icon_ball_spacing" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_dxds"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_sv_center_rlFive"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_show6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/select_fc3d_bg_tip"
+                        android:gravity="center"
+                        android:text="万位"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/common_big_text_size" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <com.gcapp.tc.view.MyGridView
+                            android:id="@+id/number_sv_dxds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="@dimen/icon_ball_size"
+                            android:gravity="center"
+                            android:horizontalSpacing="@dimen/icon_ball_spacing"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="4"
+                            android:padding="@dimen/pop_gv_padding"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="@dimen/icon_ball_spacing" />
+
+                        <com.gcapp.tc.view.MyGridView
+                            android:id="@+id/number_sv_dxds2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:columnWidth="@dimen/icon_ball_size"
+                            android:gravity="center"
+                            android:horizontalSpacing="@dimen/icon_ball_spacing"
+                            android:listSelector="@android:color/transparent"
+                            android:numColumns="4"
+                            android:padding="@dimen/pop_gv_padding"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="@dimen/icon_ball_spacing" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

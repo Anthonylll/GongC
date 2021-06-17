@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/odds_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bet_white_middle_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/live_odds_text"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/europe_odds_text"
+                style="@style/odds_type_text"
+                android:background="@color/main_red"
+                android:text="欧赔"
+                android:textColor="@color/white" />
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/recharge_gray2" />
+            
+            <TextView
+                android:id="@+id/asian_odds_text"
+                style="@style/odds_type_text"
+                android:text="亚盘"
+                android:textColor="@color/gray" />
+            
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/recharge_gray2" />
+            
+            <TextView
+                android:id="@+id/size_odds_text"
+                style="@style/odds_type_text"
+                android:text="大小"
+                android:textColor="@color/gray"/>
+            
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/odds_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/odds_top_layout"
+        android:divider="@color/hall_bg_grey2"
+		android:dividerHeight="1dp"
+        android:background="@color/white" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/odds_list"
+        android:background="@color/hall_bg_grey2" />
+    
+    <TextView
+        android:id="@+id/odds_nodata_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/odds_top_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/common_lage_text_size"
+        android:text="暂无数据"
+        android:visibility="gone" />
+
+</RelativeLayout>

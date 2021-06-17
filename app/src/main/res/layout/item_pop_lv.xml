@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_playType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="left|center_vertical"
+        android:padding="5dp"
+        android:text="普通投注"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_lage_text_size" />
+    <!--
+    <GridView
+        android:id="@+id/pop_vp_gv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="@android:color/transparent"
+        android:layout_margin="5dp"
+        android:background="@color/hall_bg_grey"
+        android:numColumns="3"
+         />
+    -->
+
+    <com.gcapp.tc.view.MyGridView
+        android:id="@+id/gv_playType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_playType"
+        android:background="@color/white"
+        android:horizontalSpacing="1dp"
+        android:padding="@dimen/hall_gv_spacing"
+        android:verticalSpacing="1dp" />
+
+</RelativeLayout>

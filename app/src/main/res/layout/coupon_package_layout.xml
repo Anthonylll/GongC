@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/hall_bg_grey"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nodata_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#a89f9d"
+        android:textSize="18dp"
+        android:text="无可用优惠券"
+        android:visibility="gone" />
+    
+    <ListView
+        android:id="@+id/coupon_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+        android:dividerHeight="1dp" 
+        android:divider="#00000000"
+        android:scrollbars="none" />
+</RelativeLayout>

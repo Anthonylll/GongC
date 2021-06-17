@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bet_white_middle_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_select"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_btn_back_size"
+            android:layout_height="@dimen/common_btn_back_size"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:id="@+id/btn_playtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="选号详情"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_lager_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top_select"
+        android:layout_marginLeft="@dimen/common_margin_left_width"
+        android:layout_marginRight="@dimen/common_margin_right_width"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/tv_fangshi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@drawable/follow_textview_bolder"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="方式"
+            android:textColor="@color/follow_tv_textcolor"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_touzhu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/follow_textview_bolder"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="投注"
+            android:textColor="@color/follow_tv_textcolor"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:id="@+id/tv_beishu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/follow_textview_bolder"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="倍数"
+            android:textColor="@color/follow_tv_textcolor"
+            android:textSize="@dimen/common_big_text_size" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/followinfo_jc_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_tile"
+        android:layout_marginLeft="@dimen/common_margin_left_width"
+        android:layout_marginRight="@dimen/common_margin_right_width"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollingCache="false" />
+
+</RelativeLayout>

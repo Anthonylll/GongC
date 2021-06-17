@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/common_pink_bg"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <TextView
+                android:id="@+id/tv_game"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/common_big_text_size" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_light" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_light" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="120dp"
+            android:background="#e5e5e5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <TextView
+                android:id="@+id/tv_mainTeam"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_light" />
+
+            <LinearLayout
+                android:id="@+id/ll_right2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_scorll"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/main_red_new" />
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_gusTeam"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_light" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="120dp"
+            android:background="#e5e5e5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_result1"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_result1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/tv_resultInfo1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/ll_result2"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_result2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/tv_resultInfo2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/ll_result3"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_result3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/tv_resultInfo3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/ll_result4"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_result4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/tv_resultInfo4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/Img_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/ll_result5"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_result5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+
+                <TextView
+                    android:id="@+id/tv_resultInfo5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/black_light" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

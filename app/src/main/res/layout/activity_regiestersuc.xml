@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_select"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_btn_back_size"
+            android:layout_height="@dimen/common_btn_back_size"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+
+        <LinearLayout
+            android:id="@+id/layout_select_playtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_red"
+                android:padding="5dp"
+                android:text="注册成功"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_max_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_top_select"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/paysuc_icon_size"
+            android:layout_height="@dimen/paysuc_icon_size"
+            android:layout_margin="20dp"
+            android:background="@drawable/paysuc_icon_gou" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="恭喜您成功注册【晓风彩票】！"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="建议立即完善资料，确保账户安全。"
+            android:textSize="@dimen/common_big_text_size" />
+
+        <Button
+            android:id="@+id/btn_perfectinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/paysuc_btn_bg"
+            android:gravity="center"
+            android:text="完善资料"
+            android:textColor="@color/paysuc_btn_textcolor"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <Button
+            android:id="@+id/btn_goto_recharge"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/paysuc_btn_bg"
+            android:gravity="center"
+            android:text="我要充值"
+            android:textColor="@color/paysuc_btn_textcolor"
+            android:textSize="@dimen/common_lage_text_size" />
+
+        <Button
+            android:id="@+id/btn_back_tohall"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/paysuc_btn_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/paysuc_btn_bg"
+            android:gravity="center"
+            android:text="我要购彩"
+            android:textColor="@color/paysuc_btn_textcolor"
+            android:textSize="@dimen/common_lage_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top_apply"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_toplayout_height"
+        android:background="@color/main_red" >
+
+        <ImageButton
+            android:id="@+id/apply_btn_back"
+            android:layout_width="@dimen/common_toplayout_height"
+            android:layout_height="@dimen/common_toplayout_height"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/main_red"
+            android:text="大神"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_lage_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/graet_man_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/layout_top_apply"
+        android:scaleType="fitXY" />
+    
+    <TextView
+        android:id="@+id/apply_condition"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:layout_marginRight="@dimen/common_margin_8"
+        android:layout_marginTop="@dimen/common_margin_8"
+        android:layout_below="@+id/graet_man_image"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_lage_text_size" />
+    
+    <TextView
+        android:id="@+id/apply_remark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:layout_marginRight="@dimen/common_margin_8"
+        android:layout_below="@+id/apply_condition"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/common_big_text_size"
+        android:text="@string/apply_great_man" />
+    
+    <Button
+        android:id="@+id/apply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:layout_marginRight="@dimen/common_margin_8"
+        android:padding="@dimen/common_margin_8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_margin_16"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_lage_text_size"
+        android:background="@color/main_red"
+        android:gravity="center"
+        android:text="立即申请" />
+
+</RelativeLayout>
